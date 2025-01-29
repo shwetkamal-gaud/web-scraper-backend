@@ -102,11 +102,15 @@ def scrape_reviews(company_name, start_date, end_date, source):
         if driver:
             driver.quit()
 
+def save_to_json(reviews, output_file):
+    with open(output_file, "w") as file:
+        json.dump(reviews, file, indent=4)
+
 if __name__ == "__main__":
     company_name = input("Enter the company name: ")
     start_date = datetime.strptime(input("Enter the start date (YYYY-MM-DD): "), "%Y-%m-%d")
     end_date = datetime.strptime(input("Enter the end date (YYYY-MM-DD): "), "%Y-%m-%d")
     source = input("Enter the source (G2/Capterra): ")
 
-    reviews = scrape_reviews(company_name, "", "", source)
-    print(reviews)
+    reviews = scrape_reviews(company_name, start_date, end_date, source)
+    save_to_json(reviews, "reviews.json")
