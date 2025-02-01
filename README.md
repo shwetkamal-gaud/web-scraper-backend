@@ -1,10 +1,10 @@
 ## **📌 Installation**
 ### **1️⃣ Clone the Repository**
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/shwetkamal-gaud/web-scraper-backend.git
 ```
 ```bash
-cd your-repo-name
+cd web-scraper-backend
 ```
 
 ## Install Dependencies
