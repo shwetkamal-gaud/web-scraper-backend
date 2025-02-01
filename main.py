@@ -10,10 +10,7 @@ from bs4 import BeautifulSoup
 import undetected_chromedriver as uc
 
 def start_undetected_chrome():
-    """Starts an undetected Chrome browser with anti-detection settings"""
     options = uc.ChromeOptions()
-
-    
     options.add_argument("--disable-blink-features=AutomationControlled")
 
     driver = uc.Chrome(options=options, use_subprocess=True)
